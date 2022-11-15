@@ -51,7 +51,7 @@ export default function App({ Component, pageProps, router }) {
   const layoutProps = Component.layoutProps?.Layout
     ? { layoutProps: Component.layoutProps, navIsOpen, setNavIsOpen }
     : {}
-  const showHeader = true;
+  const showHeader = router.pathname !== '/'
   const meta = Component.layoutProps?.meta || {}
   const description =
     meta.metaDescription || meta.description || 'Documentation for the Tailwind CSS framework.'
